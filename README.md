@@ -6,7 +6,7 @@
 
 - [x] Switch/Toggle with Switchery
 - [ ] Datepicker
-- [ ] Datetimepicker 
+- [ ] Datetimepicker
 
 ## Installation
 
@@ -60,7 +60,7 @@ Want some more customization?
 ```erb
 <%= simple_form_for :example do |f| %>
   ...
-  <%= f.input :boolean, as: :switch, input_html: {data: {color: '#FF0', secondary_color: '#0F0', jack_color: '#FFF', jack_secondary_color: '#000'}} %>
+  <%= f.input :boolean, as: :switch, input_html: {data: {color: '#FF0', secondary_color: '#0F0', jack_color: '#FFF', jack_secondary_color: '#000', size: 'small'}} %>
   ...
 <% end %>
 ```
