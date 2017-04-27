@@ -115,6 +115,9 @@ GEM
       railties (= 5.0.2)
       sprockets-rails (>= 2.0.0)
     rails-assets-fastclick (0.6.11)
+    rails-assets-jquery (3.2.1)
+    rails-assets-jquery.maskedinput (1.4.1)
+      rails-assets-jquery (>= 1.8.3)
     rails-assets-switchery (0.8.2)
       rails-assets-fastclick (= 0.6.11)
       rails-assets-transitionize
@@ -190,6 +193,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.2)
+  rails-assets-jquery.maskedinput!
   rails-assets-switchery!
   sass-rails (~> 5.0)
   simple_form

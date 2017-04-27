@@ -15,5 +15,6 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require switchery
+//= require jquery.maskedinput
 //= require simple_form_custom_inputs
 //= require_tree .

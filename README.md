@@ -5,6 +5,7 @@
 ## Availables inputs
 
 - [x] Switch/Toggle with Switchery
+- [x] Masked inputs
 - [ ] Datepicker
 - [ ] Datetimepicker
 
@@ -18,6 +19,7 @@ gem 'simple_form_custom_inputs'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-switchery'
+  gem 'rails-assets-jquery.maskedinput'
 end
 ```
 
@@ -35,6 +37,7 @@ In app/assets/javascripts/application.js, you should add as follows:
 ```js
 //= require ...
 //= require switchery
+//= require jquery.maskedinput
 //= require simple_form_custom_inputs
 //= require ...
 ```
@@ -53,9 +56,15 @@ Basic Example:
   <%= f.input :boolean, as: :switch %>
   ...
 <% end %>
+
+<%= simple_form_for :example do |f| %>
+  ...
+  <%= f.input :phone, as: :masked, input_html: {data: {pattern: '(99) 99999-9999'}} %>
+  ...
+<% end %>
 ```
 
-Want some more customization?
+Want some more customization on Switch?
 
 ```erb
 <%= simple_form_for :example do |f| %>

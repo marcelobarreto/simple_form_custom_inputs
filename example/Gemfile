@@ -41,6 +41,7 @@ gem 'bootstrap-sass'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-switchery'
+  gem 'rails-assets-jquery.maskedinput'
 end
 
 group :development, :test do

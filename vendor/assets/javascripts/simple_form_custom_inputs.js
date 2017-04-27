@@ -11,8 +11,15 @@ var initSwitchery = function() {
   }
 }
 
+var initMasks = function() {
+  var input = $('.masked input');
+  var pattern = input.data('pattern');
+  input.mask(pattern);
+}
+
 var ready = function() {
   initSwitchery();
+  initMasks();
 };
 
 if (typeof Turbolinks == "undefined") {
