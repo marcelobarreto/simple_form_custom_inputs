@@ -16,5 +16,7 @@
 //= require turbolinks
 //= require switchery
 //= require jquery.maskedinput
+//= require bootstrap-datepicker
+//= require I18n/pt-BR
 //= require simple_form_custom_inputs
 //= require_tree .

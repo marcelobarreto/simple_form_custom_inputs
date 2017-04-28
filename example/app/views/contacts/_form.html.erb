@@ -5,6 +5,7 @@
     <%= f.input :name %>
     <%= f.input :phone, as: :masked, input_html: {data: {pattern: br_phone_mask_pattern}} %>
     <%= f.input :email %>
+    <%= f.input :created_at, as: :datepicker %>
   </div>
 
   <div class="form-actions">

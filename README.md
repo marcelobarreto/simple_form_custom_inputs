@@ -6,7 +6,7 @@
 
 - [x] Switch/Toggle with Switchery
 - [x] Masked inputs
-- [ ] Datepicker
+- [x] Datepicker
 - [ ] Datetimepicker
 
 ## Installation
@@ -16,10 +16,12 @@ Add the following gems to your application's Gemfile:
 ```ruby
 gem 'simple_form'
 gem 'simple_form_custom_inputs'
+gem 'bootstrap-sass'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-switchery'
   gem 'rails-assets-jquery.maskedinput'
+  gem 'rails-assets-bootstrap-datepicker'
 end
 ```
 
@@ -38,6 +40,7 @@ In app/assets/javascripts/application.js, you should add as follows:
 //= require ...
 //= require switchery
 //= require jquery.maskedinput
+//= require bootstrap-datepicker
 //= require simple_form_custom_inputs
 //= require ...
 ```
@@ -45,7 +48,10 @@ In app/assets/javascripts/application.js, you should add as follows:
 Application.scss
 
 ```scss
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "switchery";
+@import "bootstrap-datepicker";
 ```
 
 Basic Example:
@@ -62,6 +68,12 @@ Basic Example:
   <%= f.input :phone, as: :masked, input_html: {data: {pattern: '(99) 99999-9999'}} %>
   ...
 <% end %>
+
+<%= simple_form_for :example do |f| %>
+  ...
+  <%= f.input :time, as: :datepicker %>
+  ...
+<% end %>
 ```
 
 Want some more customization on Switch?
@@ -73,6 +85,25 @@ Want some more customization on Switch?
   ...
 <% end %>
 ```
+
+## I18n on datepicker
+
+You just need to set your locale to the desired language on application.rb, and import the locale on application.js
+
+```ruby
+# application.rb
+config.i18n.default_locale = 'pt-BR'
+```
+
+```js
+...
+//= require bootstrap-datepicker
+//= require I18n/pt-BR
+...
+```
+## Help wanted
+
+Please, help with I18n for datepicker!
 
 ## Sample projects
 
