@@ -9,7 +9,8 @@
 - [x] Datepicker
 - [ ] Datetimepicker
 - [ ] Timepicker
-- [ ] File
+- [ ] File button
+- [ ] File drag n drop
 
 ## Installation
 
