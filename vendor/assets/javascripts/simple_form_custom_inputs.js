@@ -14,15 +14,22 @@ var initSwitchery = function() {
 var initMasks = function() {
   var input = $(".masked input");
   var pattern = input.data("pattern");
-  input.mask(pattern);
+  if (input && pattern)
+    input.mask(pattern);
 };
 
 var initDatepicker = function() {
-  $(".datepicker input").datepicker({
-    autoclose: true,
-    todayHighlight: true,
-    language: $(".datepicker input").data("locale")
-  });
+  try {
+    $(".datepicker input").datepicker({
+      autoclose: true,
+      todayHighlight: true,
+      language: $(".datepicker input").data("locale")
+    });
+  }
+
+  catch (e) {
+    
+  }
 };
 
 var handleAttachementLabel = function() {
