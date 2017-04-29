@@ -4,6 +4,7 @@ class ButtonFileInput < SimpleForm::Inputs::FileInput
   attr_accessor :output_buffer
 
   def input(wrapper_options = nil)
+    options[:class] = 'btn btn-default' unless options[:class]
     input_html_options[:class] << 'hidden inputfile'
     merged_input_options = merge_wrapper_options(input_html_options, wrapper_options)
 

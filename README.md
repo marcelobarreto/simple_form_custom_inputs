@@ -6,11 +6,11 @@
 
 - [x] Switch/Toggle with Switchery
 - [x] Masked inputs
+- [x] File button
+- [x] File drag n drop
 - [x] Datepicker
 - [ ] Datetimepicker
 - [ ] Timepicker
-- [x] File button
-- [x] File drag n drop
 
 ## Installation
 
@@ -25,7 +25,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-switchery'
   gem 'rails-assets-jquery.maskedinput'
   gem 'rails-assets-bootstrap-datepicker'
-  gem 'rails-assets-ezdz'
 end
 ```
 
@@ -45,7 +44,6 @@ In app/assets/javascripts/application.js, you should add as follows:
 //= require switchery
 //= require jquery.maskedinput
 //= require bootstrap-datepicker
-//= require ezdz/dist/jquery.ezdz
 //= require simple_form_custom_inputs
 //= require ...
 ```
@@ -57,7 +55,7 @@ Application.scss
 @import "bootstrap";
 @import "switchery";
 @import "bootstrap-datepicker";
-@import "ezdz/dist/jquery.ezdz";
+@import "simple_form_custom_inputs";
 ```
 
 Basic Example:
@@ -86,12 +84,9 @@ config.i18n.default_locale = 'pt-BR'
 ```js
 ...
 //= require bootstrap-datepicker
-//= require I18n/pt-BR
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR
 ...
 ```
-## Help wanted
-
-Please, help with I18n for datepicker!
 
 ## Sample projects
 
