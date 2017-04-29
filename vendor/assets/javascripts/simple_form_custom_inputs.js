@@ -28,7 +28,7 @@ var initDatepicker = function() {
   }
 
   catch (e) {
-    
+
   }
 };
 
@@ -51,13 +51,23 @@ var handleAttachementLabel = function() {
   			label.innerHTML = labelVal;
   	});
   });
-}
+};
+
+var initDropFile = function() {
+  var input = $(".drop-file");
+  input.ezdz({
+    className: input.attr('class'),
+    text: input.data('text'),
+    previewImage: input.data('preview')
+  });
+};
 
 var ready = function() {
   initSwitchery();
   initMasks();
   initDatepicker();
   handleAttachementLabel();
+  initDropFile();
 };
 
 if (typeof Turbolinks == "undefined") {

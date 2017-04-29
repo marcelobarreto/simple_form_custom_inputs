@@ -10,7 +10,7 @@
 - [ ] Datetimepicker
 - [ ] Timepicker
 - [x] File button
-- [ ] File drag n drop
+- [x] File drag n drop
 
 ## Installation
 
@@ -44,6 +44,7 @@ In app/assets/javascripts/application.js, you should add as follows:
 //= require switchery
 //= require jquery.maskedinput
 //= require bootstrap-datepicker
+//= require ezdz/dist/jquery.ezdz
 //= require simple_form_custom_inputs
 //= require ...
 ```
@@ -55,18 +56,19 @@ Application.scss
 @import "bootstrap";
 @import "switchery";
 @import "bootstrap-datepicker";
+@import "ezdz/dist/jquery.ezdz";
 ```
 
 Basic Example:
 
 ```erb
-
 <%= simple_form_for :example do |f| %>
   <%= f.input :boolean, as: :switch %>
   <%= f.input :boolean, as: :switch, input_html: {data: {color: '#FF0', secondary_color: '#0F0', jack_color: '#FFF', jack_secondary_color: '#000', size: 'small'}} %>
   <%= f.input :phone, as: :masked, input_html: {data: {pattern: '(99) 99999-9999'}} %>
   <%= f.input :time, as: :datepicker %>
   <%= f.input :photo, as: :button_file, label: false, class: 'btn btn-info', input_html: {multiple: true, data: {multiple_caption: '{count} files selected'}} %>
+  <%= f.input :album, as: :drop_file, label: false, input_html: {multiple: true, data: {text: 'Send pictures', preview: false}} %>
 <% end %>
 
 ```
