@@ -1,4 +1,4 @@
-<%= simple_form_for(@contact) do |f| %>
+<%= simple_form_for(@contact, html_options: {multipart: true}) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">

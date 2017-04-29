@@ -8,6 +8,8 @@
 - [x] Masked inputs
 - [x] Datepicker
 - [ ] Datetimepicker
+- [ ] Timepicker
+- [ ] File
 
 ## Installation
 
@@ -57,33 +59,15 @@ Application.scss
 Basic Example:
 
 ```erb
+
 <%= simple_form_for :example do |f| %>
-  ...
   <%= f.input :boolean, as: :switch %>
-  ...
-<% end %>
-
-<%= simple_form_for :example do |f| %>
-  ...
-  <%= f.input :phone, as: :masked, input_html: {data: {pattern: '(99) 99999-9999'}} %>
-  ...
-<% end %>
-
-<%= simple_form_for :example do |f| %>
-  ...
-  <%= f.input :time, as: :datepicker %>
-  ...
-<% end %>
-```
-
-Want some more customization on Switch?
-
-```erb
-<%= simple_form_for :example do |f| %>
-  ...
   <%= f.input :boolean, as: :switch, input_html: {data: {color: '#FF0', secondary_color: '#0F0', jack_color: '#FFF', jack_secondary_color: '#000', size: 'small'}} %>
-  ...
+  <%= f.input :phone, as: :masked, input_html: {data: {pattern: '(99) 99999-9999'}} %>
+  <%= f.input :time, as: :datepicker %>
+  <%= f.input :photo, as: :button_file, label: false, class: 'btn btn-info', input_html: {multiple: true, data: {multiple_caption: '{count} files selected'}} %>
 <% end %>
+
 ```
 
 ## I18n on datepicker
