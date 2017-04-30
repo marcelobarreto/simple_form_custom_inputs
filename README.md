@@ -6,6 +6,7 @@
 
 - [x] Switch/Toggle with Switchery
 - [x] Masked inputs
+- [ ] Money inputs based on locale
 - [x] File button
 - [x] File drag n drop
 - [x] Datepicker
