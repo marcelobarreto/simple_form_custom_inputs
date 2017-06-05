@@ -1,16 +1,18 @@
 //= require ./ezdz
 
 var initSwitchery = function() {
-  var elem = $(".js-switch")
-  if (elem[0]){
-    var init = new Switchery(elem[0], {
+  var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+
+  elems.forEach(function(html) {
+    var elem = $("#" + html.id)
+    var switchery = new Switchery(elem[0], {
       color: elem.data("color"),
       secondaryColor: elem.data("secondaryColor"),
       jackColor: elem.data("jackColor"),
       jackSecondaryColor: elem.data("jackSecondaryColor"),
       size: elem.data("size")
     });
-  };
+  });
 };
 
 var initMasks = function() {
