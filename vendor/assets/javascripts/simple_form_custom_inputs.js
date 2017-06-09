@@ -66,12 +66,17 @@ var initDropFile = function() {
   });
 };
 
+var loaded = false;
+
 var ready = function() {
-  initSwitchery();
-  initMasks();
-  initDatepicker();
-  handleAttachementLabel();
-  initDropFile();
+  if(!loaded) {
+    initSwitchery();
+    initMasks();
+    initDatepicker();
+    handleAttachementLabel();
+    initDropFile();
+    loaded = true;
+  }
 };
 
 $(document).on("ready turbolinks:load", ready);
